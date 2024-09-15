@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "npm run build && gh-pages -d dist",
-    "deploy": "gh-pages -d dist --nojekyll --cname https://gaurabacharya.github.io/"
+    "deploy": "gh-pages -d dist --nojekyll --cname https://gaurabacharya.github.io/",
+    "static": "next build && next export && touch ./dist/.nojekyll && echo 'https://gaurabacharya.github.io' > ./dist/CNAME"
   },
   "dependencies": {
     "@next/font": "^14.2.9",

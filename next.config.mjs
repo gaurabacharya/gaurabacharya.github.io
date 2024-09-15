@@ -11,6 +11,11 @@ const nextConfig = {
     assetPrefix: isProd ? '/gaurabacharya.github.io/': '',
     basePath: isProd ? '/gaurabacharya.github.io': '',
     trailingSlash: true,
+    cssModules: true,
+     cssLoaderOptions: {
+   importLoaders: 1,
+  localIdentName: "[]",
+ },
 };
 
 export default nextConfig;

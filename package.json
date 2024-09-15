@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && touch dist/.nojekyll",
+    "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
     "lint": "next lint",
-    "export": "npm run build && gh-pages -d dist"
+    "export": "npm run build && gh-pages -d out",
+    "deploy": "gh-pages -d out --nojekyll --cname https://gaurabacharya.github.io/"
   },
   "dependencies": {
     "@next/font": "^14.2.9",

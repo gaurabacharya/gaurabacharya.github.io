@@ -8,8 +8,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    assetPrefix: isProd ? '/gaurabacharya.github.io/': '',
-    basePath: isProd ? '/gaurabacharya.github.io/': '',
+    assetPrefix: isProd ? '/gaurabacharya.github.io': '',
+    basePath: isProd ? '/gaurabacharya.github.io': '',
     trailingSlash: true,
 };
 

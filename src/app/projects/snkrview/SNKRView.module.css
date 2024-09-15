@@ -1,0 +1,99 @@
+.snkrviewPage {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    background: linear-gradient(45deg, #141e30, #243b55);
+  }
+
+  .header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+  }
+
+
+.iconLinks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iconLinks a {
+    color: #ffffff; /* Icon color */
+    transition: color 0.3s ease;
+  }
+  
+  .iconLinks a:hover {
+    color: #0070f3; /* Change color on hover */
+  }
+  
+  .textImageRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns: one for text, one for the image */
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .textSection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textSection h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .textSection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .textSection p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #d3d1d1;
+  }
+  
+  .imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .videoSection { 
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: '#000';
+    justify-content: center;
+    display: flex;
+    }
+
+.video {
+    border-radius: 20px;
+    overflow: hidden;
+}
+  
+  .projectImage {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow around images */
+  }
+  
+  @media (max-width: 1024px) {
+    .textImageRow {
+      grid-template-columns: 1fr; /* Stack text and image vertically on smaller screens */
+    }
+  
+    .imageSection {
+      margin-top: 20px;
+    }
+  }

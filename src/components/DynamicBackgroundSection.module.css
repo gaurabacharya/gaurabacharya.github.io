@@ -1,0 +1,27 @@
+.section {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease-in-out; 
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    z-index: 2; 
+  }
+  
+  .h1 {
+    font-size: 2.5rem;
+    margin: 50px;
+    text-align: center;
+  }
+  
+  .p {
+    font-size: 18pt;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  

@@ -1,22 +1,26 @@
 .carouselSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
   height: 100vh;
   width: 100%;
   justify-content: center;
-  display: flex;
   background: linear-gradient(45deg, #f9d29d, #fab3a9);
+  overflow-y: auto;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .carouselContainer {
     position: relative;
-    width: 700px;
-    height: 500px; 
+    width: 90%;
+    height: 70%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 5%;
-    top: 18%;
     border-radius: 20px;
+    padding: 20px;
   }
   
   .carouselImage {
@@ -25,9 +29,7 @@
     object-fit: cover; 
     object-position: center; 
     transition: transform 0.3s ease;
-    flex: 1;
     justify-content: center;
-    right: 5%;
   }
 
   .caption {
@@ -95,19 +97,18 @@
   }
 
   .projectTextContainer {
-    flex: 2;
-    width: 40%;
+    /* flex: 2; */
+    width: 100%;
     flex-direction: column; 
     justify-content: center; 
     text-align: center;
     box-sizing: border-box;
-    padding-top: 15%;
-    padding-left: 5%;
-    padding-right: 10%;
-    padding-bottom: 10%;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
   }
 
-  .projectHeader {
+  .projectTextContainer h2 {
     font-size: 30px;         
     font-weight: bold;
     align-items: center;
@@ -116,7 +117,7 @@
     color: #000000;
   }
 
-  .projectP {
+  .projectTextContainer p {
     font-size: 18px;        
     color: #000000;
   }
@@ -131,4 +132,16 @@
     font-size: 16px;               
     transition: background-color 0.3s ease;  
   }
+
+  @media (max-width: 1024px) {
+    .carouselSection {
+      grid-template-columns: 1fr; /* Stack the items on top of each other */
+      height: auto;
+    }
   
+    .projectTextContainer,
+    .carouselContainer {
+      width: 100%;
+      padding: 10px;
+    }
+  }

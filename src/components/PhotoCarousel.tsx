@@ -91,8 +91,8 @@ const PhotoCarousel = () => {
   return (
     <div className={styles.carouselSection}>
         <div className={`${styles.projectTextContainer} ${ubuntu.className}`}>
-            <header className={styles.projectHeader}>Welcome to My Project Collection!</header>
-            <p className={styles.projectP}>
+            <h2>Welcome to My Project Collection!</h2>
+            <p>
                 This section showcases a curated collection of my personal projects,
                 which I’ve developed through various experiences, including hackathons,
                 personal endeavors, and projects at UBC. Each project reflects my passion

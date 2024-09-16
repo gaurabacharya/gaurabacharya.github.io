@@ -1,6 +1,9 @@
 /* ProjectsPage.module.css */
 .pageSection {
   background: linear-gradient(45deg, #1a2980, #26d0ce);
+  width: 100%;
+  height: auto;
+  overflow: auto;
 }
 .projectsGrid {
     display: grid;

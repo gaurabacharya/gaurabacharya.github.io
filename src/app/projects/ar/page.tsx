@@ -14,7 +14,7 @@ const ARProject = () => {
 
   const images = {
     arIcon: {src: '/images/ARIcon.png', alt: "Augmented Reality Icon"},
-    appCollage: {src: '/images/ARAppCollage.png', alt: "AR Application Collage with Legend"},
+    appCollage: {src: '/images/arAppCollage.png', alt: "AR Application Collage with Legend"},
     tools: {src: '/images/tools.png', alt: "Software tools used"},
     team: {src: '/images/capstoneTeamPicture.png', alt: "Capstone Team Picture"},
   };

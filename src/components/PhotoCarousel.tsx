@@ -1,5 +1,4 @@
-// components/PhotoCarousel.tsx
-"use client"; // Ensure this is a client component
+"use client"; 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './PhotoCarousel.module.css';
@@ -7,7 +6,7 @@ import Link from 'next/link';
 import { Ubuntu_Mono } from 'next/font/google';
 
 const ubuntu = Ubuntu_Mono({
-    weight: ['400', '400'],  // Specify weights you want to use (regular and bold in this case)
+    weight: ['400', '400'],  
     subsets: ['latin']
   });
 
@@ -45,7 +44,7 @@ const PhotoCarousel:React.FC<CarouselInput> = ({photos, title, summary, summaryB
   useEffect(() => {
     const autoSlide = setInterval(nextPhoto, 5000);
     return () => clearInterval(autoSlide);
-  }, []);
+  }, [nextPhoto]);
   
   return (
     <div className={styles.carouselSection} style={{background: backgroundColor}}>

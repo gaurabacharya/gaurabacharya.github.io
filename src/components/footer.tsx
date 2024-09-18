@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
             </ul>
         </nav>
-      <p>© 2024 Gaurab's Website. All rights reserved. Made with React and NextJS.</p>
+      <p>© 2024 Gaurab&apos;s Website. All rights reserved. Made with React and NextJS.</p>
     </footer>
   );
 };

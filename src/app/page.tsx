@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/header';
 import PhotoCarousel from '@component/components/PhotoCarousel';
 import DynamicBackgroundSection from '@component/components/DynamicBackgroundSection';
+import Footer from '../components/footer';
 
 const projectPhotos = [
   { src: '/images/ARIcon.png', width: 1920, height: 1080,
@@ -83,7 +84,7 @@ const HomePage = () => {
         projectButtonText="See Project"
         backgroundColor='linear-gradient(45deg, #f9d29d, #fab3a9)'
       />
-
+      <Footer/>
     </div>
   );
 };

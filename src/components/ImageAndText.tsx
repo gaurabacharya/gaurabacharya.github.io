@@ -13,9 +13,26 @@ interface FormProps {
     header: string;
     alt: string;
     text: string;
+    text2: string;
 }
   
-const ImageAndText: React.FC<FormProps> = ({imageSrc, header, alt, text}) => {
+const ImageAndText: React.FC<FormProps> = ({imageSrc, header, alt, text, text2}) => {
+    let paragraphContent = (
+        <div className={`${ubuntu.className} ${styles.textContainer}`}>
+                <header className={styles.header}>{header}</header>
+                <p className={styles.p}>{text}</p>
+        </div>
+    )
+    if (text2.length > 1) {
+        paragraphContent = (
+            <div className={`${ubuntu.className} ${styles.textContainer}`}>
+                <header className={styles.header}>{header}</header>
+                <p className={styles.p}>{text}</p>
+                <p className={styles.p}>{text2}</p>
+        </div>
+        )
+    }
+
     return (
         <div className={`${ubuntu.className} ${styles.container}`}>
             <div className={styles.imageContainer}>
@@ -29,10 +46,7 @@ const ImageAndText: React.FC<FormProps> = ({imageSrc, header, alt, text}) => {
                 className={styles.roundedImage}
                 />
             </div>
-            <div className={`${ubuntu.className} ${styles.textContainer}`}>
-                <header className={styles.header}>{header}</header>
-                <p className={styles.p}>{text}</p>
-            </div>
+            {paragraphContent}
         </div>
     );
 }

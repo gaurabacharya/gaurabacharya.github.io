@@ -27,14 +27,14 @@
     justify-content: center;
     padding-bottom: 50px;
     color: #ffff;
+    text-align: center;
   }
 
   .textContainer {
     flex: 2;
     width: 40%;
     flex-direction: column;  
-    justify-content: center; 
-    text-align: center;
+    justify-content: center;
     padding: 100px;
     box-sizing: border-box;
   }
@@ -42,4 +42,6 @@
   .p {
     font-size: 18px;        
     color: #ffff;
+    text-align: left;
+    padding-bottom: 20px;
   }

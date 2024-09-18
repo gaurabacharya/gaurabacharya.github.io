@@ -3,6 +3,7 @@ import Header from '../../../components/header';
 import Image from 'next/image';
 import styles from './AR.module.css'; 
 import { Ubuntu_Mono } from 'next/font/google';
+import Footer from '../../../components/footer';
 
 const ubuntu = Ubuntu_Mono({
     weight: ['400', '400'],  
@@ -111,6 +112,7 @@ const ARProject = () => {
         </div>
       </div>
     </section>
+    <Footer/>
     </div>
   );
 };

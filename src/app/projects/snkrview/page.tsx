@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from './SNKRView.module.css';
 import { Ubuntu_Mono } from 'next/font/google';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Footer from '../../../components/footer';
 
 const ubuntu = Ubuntu_Mono({
     weight: ['400', '400'],  
@@ -119,6 +120,7 @@ const SnkrViewProject = () => {
         </div>
       </div>
     </section>
+    <Footer/>
     </div>
   );
 };

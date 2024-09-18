@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from './Posture.module.css'; 
 import { Ubuntu_Mono } from 'next/font/google';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import Footer from '../../../components/footer';
 
 const ubuntu = Ubuntu_Mono({
     weight: ['400', '400'],  
@@ -125,6 +126,7 @@ const PostureProject = () => {
         </div>
       </div>
     </section>
+    <Footer/>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const gaurabPortrait =  {
           "specializing in Systems and Signals at UBC. I'm passionate about " +
           "building software that has an impact on people, with a focus on healthcare. " +
           "In my free time I love to give back, through sport, by coaching local teams " +
-          "in my community and I love developing new software projects. "
+          "in my community, and developing new software projects. "
 };
 
 
@@ -47,6 +47,7 @@ const DynamicBackgroundSection: React.FC = () => {
         header={gaurabPortrait.header}
         alt={gaurabPortrait.alt}
         text={gaurabPortrait.text}
+        text2=''
        />
     </section>
 

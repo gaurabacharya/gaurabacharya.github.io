@@ -3,6 +3,7 @@ import Header from '../../components/header';
 import ProjectItem from '../../components/ProjectItem';
 import styles from './ProjectPage.module.css';
 import { Ubuntu_Mono } from 'next/font/google';
+import Footer from '../../components/footer';
 
 const ubuntu = Ubuntu_Mono({
     weight: ['400', '400'],  
@@ -87,6 +88,7 @@ const ProjectsPage = () => {
           />
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

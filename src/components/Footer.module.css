@@ -1,0 +1,54 @@
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e3c72;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navItem {
+    margin: 0 15px;
+  }
+  
+  .navItem a {
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navItem a:hover {
+    color: #8bdaff;
+  }
+
+  .iconLinks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iconLinks a {
+    color: #ffffff; /* Icon color */
+    transition: color 0.3s ease;
+  }
+  
+  .iconLinks a:hover {
+    color: #0070f3; /* Change color on hover */
+  }

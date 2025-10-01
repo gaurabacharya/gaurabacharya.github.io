@@ -57,8 +57,8 @@
   } 
 */
 
-.header {
-  position: sticky;    /* keeps header visible when scrolling */
+/* .header {
+  position: sticky;    /* keeps header visible when scrolling 
   top: 0;
   z-index: 50;
   background-color: #1F305E;
@@ -88,7 +88,7 @@
   margin: 0;
   padding: 0;
 
-  /* On very small screens, let the links scroll horizontally */
+  /* On very small screens, let the links scroll horizontally 
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -101,7 +101,7 @@
   text-decoration: none;
   font-weight: 600;
   line-height: 1;
-  padding: 8px 4px;      /* bigger tap target */
+  padding: 8px 4px;      /* bigger tap target 
 }
 .navItem a:hover { color: #8bdaff; }
 
@@ -118,7 +118,7 @@
 }
 .iconLinks a:hover { color: #0070f3; }
 
-/* Layout row: name at left, nav scrolls, icons at right */
+/* Layout row: name at left, nav scrolls, icons at right 
 .header > .navbar {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -126,8 +126,134 @@
   gap: 12px;
 }
 
-/* Mobile: tighten spacing a bit */
+/* Mobile: tighten spacing a bit 
 @media (max-width: 480px) {
   .navItem { margin: 0; }
   .name { font-size: 18px; }
+} */
+
+/* Container */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1F305E;
+  color: #fff;
+  /* respect iOS safe areas */
+  padding-top: max(8px, env(safe-area-inset-top));
 }
+
+/* Top bar layout */
+.bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px clamp(12px, 3vw, 20px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.name {
+  font-size: clamp(18px, 3.6vw, 22px);
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;             /* prevent awkward wrapping of name */
+}
+.name a { color: #fff; text-decoration: none; }
+
+/* Desktop primary nav */
+.desktopNav {
+  display: block;
+}
+.navList {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2.2vw, 18px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 4px;                /* touch-friendly */
+}
+.navItem a:hover { color: #8bdaff; }
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Social icons */
+.iconLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.icon {
+  width: 22px;
+  height: 22px;
+}
+.iconLinks a { color: #fff; transition: color .2s ease; }
+.iconLinks a:hover { color: #8bdaff; }
+
+/* Mobile menu button (hidden on desktop) */
+.menuButton {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+}
+.menuButton:active { background: rgba(255,255,255,0.08); }
+
+/* Mobile nav (collapsed by default) */
+.mobileNav {
+  display: none;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.mobileNavOpen {
+  display: block;
+}
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 8px clamp(12px, 4vw, 20px) 14px;
+  display: grid;
+  gap: 8px;
+}
+.mobileList a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.mobileList a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* --- Mobile layout rules --- */
+@media (max-width: 720px) {
+  /* Hide desktop nav, show menu button */
+  .desktopNav { display: none; }
+  .menuButton { display: inline-flex; }
+  /* Slightly smaller icons so everything fits */
+  .icon { width: 20px; height: 20px; }
+}
+
+/* Guardrails: never allow horizontal overflow */
+/* html, body { overflow-x: hidden; } */
+/* :global(html, body) { overflow-x: hidden; } */

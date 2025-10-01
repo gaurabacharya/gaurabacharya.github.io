@@ -1,7 +1,7 @@
-.projectItemContainer {
-    border-radius: 15px; /* Curved corners */
+/* .projectItemContainer {
+    border-radius: 15px; /* Curved corners 
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow 
     background-color: white;
     transition: transform 0.3s ease;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 .projectItemContainer:hover {
-    transform: translateY(-5px); /* Lift the card on hover */
+    transform: translateY(-5px); /* Lift the card on hover 
 }
 
 .imageContainer {
@@ -41,4 +41,66 @@
   font-size: 1rem;
   color: #555;
 }
+ */
 
+ /* Make the whole card clickable neatly */
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fluid card: fills grid cell, but capped so it never gets too wide */
+.projectItemContainer {
+  width: 100%;
+  max-width: 360px;                /* keeps a nice readable measure */
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s ease;
+  height: auto;                    /* let content define height */
+}
+.projectItemContainer:hover {
+  transform: translateY(-3px);
+}
+
+/* Consistent media box using aspect-ratio */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.image { /* next/image uses fill; class for extra rules if needed */ }
+
+/* Content */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+
+.title {
+  font-size: clamp(16px, 2.6vw, 20px);
+  line-height: 1.25;
+  margin: 2px 0 6px 0;
+  color: #111;
+  font-weight: 700;
+}
+
+.p {
+  font-size: clamp(13px, 2.3vw, 16px);
+  line-height: 1.55;
+  color: #555;
+  margin: 0;
+  overflow-wrap: anywhere;         /* prevent overflow on long tokens */
+}
+
+/* Tiny screens: give a little more breathing room */
+@media (max-width: 400px) {
+  .projectItemContainer { max-width: 320px; }
+}

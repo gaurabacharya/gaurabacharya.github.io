@@ -73,20 +73,22 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className={`${styles.pageSection} ${ubuntu.className}`}>
+    <div>
       <Header/>
-      <h1 className={styles.header}>Projects</h1>
-      <div className={styles.projectsGrid}>
-        {projects.map((project, index) => (
-          <ProjectItem 
-            key={index}
-            iconSrc={project.src}
-            alt={project.header}
-            projectTitle={project.header}
-            caption={project.text}
-            projectUri={project.projectUri}
-          />
-        ))}
+      <div className={`${styles.pageSection} ${ubuntu.className}`}>
+        <h1 className={styles.header}>Projects</h1>
+        <div className={styles.projectsGrid}>
+          {projects.map((project, index) => (
+            <ProjectItem 
+              key={index}
+              iconSrc={project.src}
+              alt={project.header}
+              projectTitle={project.header}
+              caption={project.text}
+              projectUri={project.projectUri}
+            />
+          ))}
+        </div>
       </div>
       <Footer/>
     </div>

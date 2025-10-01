@@ -1,4 +1,4 @@
-.section {
+/* .section {
     height: 100vh; 
     display: flex;
     justify-content: center;
@@ -24,4 +24,37 @@
     padding-left: 20px;
     text-align: center;
   }
-  
+   */
+
+.section {
+  /* Avoid fixed 100vh which can trap scroll on mobile and fight the header */
+  min-height: 70vh;         /* comfortable hero height */
+  padding: 32px 16px;       /* breathing room, especially on mobile */
+  display: grid;
+  place-items: center;
+  transition: background 1s ease-in-out;
+}
+
+/* If you later add .content, keep it friendly */
+.content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.h1 {
+  font-size: clamp(24px, 4vw, 40px);
+  margin: 24px 0;
+  text-align: center;
+}
+
+.p {
+  font-size: clamp(14px, 2.4vw, 18px);
+  padding: 0 8px;
+  text-align: center;
+  overflow-wrap: anywhere; /* prevent overflow on long/compound words */
+}
+

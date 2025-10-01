@@ -41,10 +41,17 @@ const PhotoCarousel:React.FC<CarouselInput> = ({photos, title, summary, summaryB
     setCurrentIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
   };
 
+  // useEffect(() => {
+  //   const autoSlide = setInterval(nextPhoto, 5000);
+  //   return () => clearInterval(autoSlide);
+  // }, [nextPhoto]);
+
   useEffect(() => {
-    const autoSlide = setInterval(nextPhoto, 5000);
-    return () => clearInterval(autoSlide);
-  }, [nextPhoto]);
+  const id = setInterval(() => {
+    setCurrentIndex((i) => (i + 1) % photos.length);
+  }, 5000);
+  return () => clearInterval(id);
+}, [photos.length]);
   
   return (
     <div className={styles.carouselSection} style={{background: backgroundColor}}>
@@ -61,14 +68,15 @@ const PhotoCarousel:React.FC<CarouselInput> = ({photos, title, summary, summaryB
         </div>
         <div className={styles.carouselContainer}>
             <Image
-                src={photos[currentIndex].src}
-                alt={`Slide ${currentIndex + 1}`}
-                layout="fill"
-                objectFit="cover"
-                priority={true} 
-                className={styles.carouselImage}
+              src={photos[currentIndex].src}
+              alt={`Slide ${currentIndex + 1}`}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+              className={styles.carouselImage}
+              style={{ objectFit: 'cover' }}
             />
-            <div className={`${styles.caption} ${ubuntu.className}`}>
+            {/* <div className={`${styles.caption} ${ubuntu.className}`}>
                 <h2 className={styles.captionHeader}>{photos[currentIndex].header}</h2>
                 <p className={styles.captionText}>{photos[currentIndex].text}</p>
                 <Link href={photos[currentIndex].projectUri}>
@@ -76,12 +84,23 @@ const PhotoCarousel:React.FC<CarouselInput> = ({photos, title, summary, summaryB
                         {projectButtonText}
                     </button>
                 </Link>
+            </div> */}
+            <div className={`${styles.caption} ${ubuntu.className}`}>
+              <div className={styles.captionInner}>
+                <h2 className={styles.captionHeader}>{photos[currentIndex].header}</h2>
+                <p className={styles.captionText}>{photos[currentIndex].text}</p>
+                <Link href={photos[currentIndex].projectUri}>
+                  <button className={`${styles.curvedButton} ${ubuntu.className}`}>
+                    {projectButtonText}
+                  </button>
+                </Link>
+              </div>
             </div>
-            <button className={styles.prevButton} onClick={prevPhoto}>
-                &#10094;
+            <button className={styles.prevButton} onClick={prevPhoto} aria-label="Previous slide">
+              &#10094;
             </button>
-            <button className={styles.nextButton} onClick={nextPhoto}>
-                &#10095;
+            <button className={styles.nextButton} onClick={nextPhoto} aria-label="Next slide">
+              &#10095;
             </button>
         </div>
     </div>

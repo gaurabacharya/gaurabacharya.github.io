@@ -1,4 +1,4 @@
-.name {
+/* .name {
     color: #ffff;
     font-weight: bold;
     float: left;
@@ -48,10 +48,86 @@
   }
   
   .iconLinks a {
-    color: #ffffff; /* Icon color */
+    color: #ffffff; /* Icon color 
     transition: color 0.3s ease;
   }
   
   .iconLinks a:hover {
-    color: #0070f3; /* Change color on hover */
-  }
+    color: #0070f3; /* Change color on hover 
+  } 
+*/
+
+.header {
+  position: sticky;    /* keeps header visible when scrolling */
+  top: 0;
+  z-index: 50;
+  background-color: #1F305E;
+  width: 100%;
+  padding: 10px 16px;
+}
+
+.name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+
+  /* On very small screens, let the links scroll horizontally */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+.navList::-webkit-scrollbar { display: none; }
+
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 4px;      /* bigger tap target */
+}
+.navItem a:hover { color: #8bdaff; }
+
+.iconLinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.iconLinks a {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+.iconLinks a:hover { color: #0070f3; }
+
+/* Layout row: name at left, nav scrolls, icons at right */
+.header > .navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Mobile: tighten spacing a bit */
+@media (max-width: 480px) {
+  .navItem { margin: 0; }
+  .name { font-size: 18px; }
+}

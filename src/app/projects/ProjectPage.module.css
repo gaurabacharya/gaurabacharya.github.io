@@ -1,4 +1,4 @@
-/* ProjectsPage.module.css */
+/* ProjectsPage.module.css
 .pageSection {
   background: linear-gradient(45deg, #1a2980, #26d0ce);
   width: 100%;
@@ -7,20 +7,20 @@
 }
 .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
-    gap: 70px; /* Space between the grid items */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row 
+    gap: 70px; /* Space between the grid items 
     padding: 20px;
   }
   
   @media (max-width: 1024px) {
     .projectsGrid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens 
     }
   }
   
   @media (max-width: 768px) {
     .projectsGrid {
-      grid-template-columns: 1fr; /* 1 column for mobile screens */
+      grid-template-columns: 1fr; /* 1 column for mobile screens 
     }
   }
 
@@ -33,4 +33,37 @@
     color: #ffff;
     text-align: center;
   }
-  
+   */
+
+   /* ProjectsPage.module.css */
+.pageSection {
+  background: linear-gradient(45deg, #1a2980, #26d0ce);
+  width: 100%;
+  /* Let the page scroll naturally; avoid nested scroll containers */
+  min-height: 100dvh;
+  overflow: visible;
+  /* center the content and give breathing room on all devices */
+  padding: clamp(16px, 4vw, 48px) clamp(12px, 4vw, 32px);
+}
+
+/* Center the grid block on large screens */
+.projectsGrid {
+  display: grid;
+  /* Fluid grid: 1 → 2 → 3 columns automatically, min card width ~280px */
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: clamp(16px, 4vw, 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive page title */
+.header { 
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto clamp(20px, 5vw, 36px);
+  max-width: 1200px;
+  padding: 0 clamp(4px, 2vw, 8px);
+}

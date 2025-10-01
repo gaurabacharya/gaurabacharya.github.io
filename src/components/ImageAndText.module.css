@@ -1,4 +1,4 @@
-.container {
+/* .container {
     height: 100vh; 
     width: 100%;
     display: flex;
@@ -44,4 +44,95 @@
     color: #ffff;
     text-align: left;
     padding-bottom: 20px;
+  } */
+
+/* Layout */
+.container {
+  /* Let content breathe and scroll naturally (no 100vh lock) */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vw, 48px);
+  padding: clamp(16px, 4vw, 64px) clamp(12px, 4vw, 40px);
+
+  /* If this sits on dark gradient, keep the transition */
+  transition: background 1s ease-in-out;
+  flex-wrap: wrap; /* allows wrap if space is tight */
+}
+
+/* Image column */
+.imageContainer {
+  flex: 1 1 380px;          /* grows, shrinks, prefers ~380px */
+  display: flex;
+  justify-content: center;
+}
+
+/* A perfect circle that scales; holds the fill image */
+.imageFrame {
+  position: relative;
+  width: min(70vw, 380px);  /* cap size on large screens, shrink on mobile */
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* next/image uses fill; no width/height needed here */
+.roundedImage {
+  border-radius: 50%; /* safety, though the frame already clips */
+}
+
+/* Text column */
+.textContainer {
+  flex: 1 1 420px;                    /* grows, shrinks, prefers ~420px */
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(8px, 2vw, 16px);
+  box-sizing: border-box;
+}
+
+/* Typography: fluid & readable on mobile */
+.header {
+  font-size: clamp(24px, 4.2vw, 42px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 clamp(12px, 2.4vw, 20px) 0;
+}
+
+.p {
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.6;
+  color: #fff;
+  margin: 0 0 clamp(10px, 2vw, 16px) 0;
+  text-align: left;
+  overflow-wrap: anywhere; /* prevents overflow on narrow screens */
+}
+
+/* Mobile-first stacking & tweaks */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;      /* stack: image on top, text below */
+    text-align: center;
   }
+  .textContainer {
+    max-width: 680px;
+    padding: clamp(8px, 4vw, 20px);
+  }
+  .p {
+    text-align: center;          /* center paragraphs for small screens */
+  }
+}
+
+/* Very small phones: give the image a bit more width */
+@media (max-width: 420px) {
+  .imageFrame {
+    width: 78vw;
+  }
+}

@@ -11,42 +11,60 @@ const ubuntu = Ubuntu_Mono({
 
 const Header = () => {
   return (
-    <header className={`${styles.header} ${ubuntu.className}`}>
-        <h1 className={styles.name}>Gaurab Acharya</h1>
-        <nav className={styles.navbar}> 
-            <ul className={styles.navList}> 
-                <li className={styles.navItem}>
-                    <Link href="/">Home</Link>
-                </li>
-                <li className={styles.navItem}>
-                    <Link href="/resume">Resume</Link>
-                </li>
-                <li className={styles.navItem}>
-                    <Link href="/about">About Me</Link>
-                </li>
-                <li className={styles.navItem}>
-                    <Link href="/projects">Projects</Link>
-                </li>
-                <div className={styles.iconLinks}>
-                <li>
-                    <a href="https://github.com/gaurabacharya/" target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={25} />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/gaurab-acharya/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin size={25} />
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:gaurab_acharya@outlook.com" target="_blank" rel="noopener noreferrer">
-                        <FaEnvelope size={25} />
-                    </a>
-                </li>
-                </div>
-            </ul>
-        </nav>
+    // <header className={`${styles.header} ${ubuntu.className}`}>
+    //     <h1 className={styles.name}>Gaurab Acharya</h1>
+    //     <nav className={styles.navbar}> 
+    //         <ul className={styles.navList}> 
+    //             <li className={styles.navItem}>
+    //                 <Link href="/">Home</Link>
+    //             </li>
+    //             <li className={styles.navItem}>
+    //                 <Link href="/resume">Resume</Link>
+    //             </li>
+    //             <li className={styles.navItem}>
+    //                 <Link href="/about">About Me</Link>
+    //             </li>
+    //             <li className={styles.navItem}>
+    //                 <Link href="/projects">Projects</Link>
+    //             </li>
+    //             <div className={styles.iconLinks}>
+    //             <li>
+    //                 <a href="https://github.com/gaurabacharya/" target="_blank" rel="noopener noreferrer">
+    //                     <FaGithub size={25} />
+    //                 </a>
+    //             </li>
+    //             <li>
+    //                 <a href="https://www.linkedin.com/in/gaurab-acharya/" target="_blank" rel="noopener noreferrer">
+    //                     <FaLinkedin size={25} />
+    //                 </a>
+    //             </li>
+    //             <li>
+    //                 <a href="mailto:gaurab_acharya@outlook.com" target="_blank" rel="noopener noreferrer">
+    //                     <FaEnvelope size={25} />
+    //                 </a>
+    //             </li>
+    //             </div>
+    //         </ul>
+    //     </nav>
       
+    // </header>
+    <header className={`${styles.header} ${ubuntu.className}`}>
+        <div className={styles.navbar}>
+            <h1 className={styles.name}>Gaurab Acharya</h1>
+            <nav>
+            <ul className={styles.navList}>
+                <li className={styles.navItem}><Link href="/">Home</Link></li>
+                <li className={styles.navItem}><Link href="/resume">Resume</Link></li>
+                <li className={styles.navItem}><Link href="/about">About Me</Link></li>
+                <li className={styles.navItem}><Link href="/projects">Projects</Link></li>
+            </ul>
+            </nav>
+            <div className={styles.iconLinks}>
+            <a href="https://github.com/gaurabacharya/" target="_blank" rel="noopener noreferrer"><FaGithub size={22} /></a>
+            <a href="https://www.linkedin.com/in/gaurab-acharya/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={22} /></a>
+            <a href="mailto:gaurab_acharya@outlook.com" target="_blank" rel="noopener noreferrer"><FaEnvelope size={22} /></a>
+            </div>
+        </div>
     </header>
   );
 };

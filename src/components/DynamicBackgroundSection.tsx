@@ -7,7 +7,7 @@ const gaurabPortrait =  {
     imageSrc: '/images/GaurabPortrait.png',
     header: "Hi I'm Gaurab",
     alt: "Gaurab's Portrait Image",
-    text: "I'm a Software Engineer at QuoteMedia working on data migration, MCP servers, and optimizing API performance " + 
+    text: "I'm a Software Engineer at QuoteMedia working on data migration, MCP servers, and optimizing API performance. " + 
           "I'm passionate about focusing on building systems full stack, with a focus on data processing and AI agents." +
           "In my free time I love to give back, through sport, by coaching local teams " +
           "in my community, and developing new software projects. "

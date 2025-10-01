@@ -7,7 +7,7 @@ const DownloadPdf = () => {
   return (
     <div className={styles.pageSection}>
       <Header/>
-      <iframe className={styles.iframe} src="/pdf/Gaurab_Acharya_Resume.pdf"/>
+      <iframe className={styles.iframe} src="/pdf/Gaurab_Acharyas_Resume.pdf"/>
       <Footer/>
     </div>
   );

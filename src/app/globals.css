@@ -11,6 +11,20 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --screen-h: 100vh;
+}
+
+/* Desktop renders at 80%; vh lengths are scaled by zoom too, so 125vh fills the window. */
+@media (min-width: 1024px) {
+  html {
+    zoom: 0.8;
+  }
+  :root {
+    --screen-h: 125vh;
+  }
+}
+
 body {
   margin: 0;
   background: #eee8df;

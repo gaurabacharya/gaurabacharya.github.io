@@ -21,6 +21,12 @@ const config: Config = {
         mono: ["var(--font-mono)", "monospace"],
         flourish: ["var(--font-flourish)", "serif"],
       },
+      minHeight: {
+        screen: "var(--screen-h)",
+      },
+      height: {
+        screen: "var(--screen-h)",
+      },
       spacing: {
         "ds-1": "8px",
         "ds-2": "16px",

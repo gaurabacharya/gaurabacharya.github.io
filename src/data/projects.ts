@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     mono: "RAG",
     title: "Medical RAG Chatbot",
     meta: "Full-stack · 2025",
-    image: "/images/projects/MedicalRagIcon.png",
+    image: "/images/projects/MedicalRAGIcon.png",
     short:
       "Full-stack medical Q&A chatbot pairing Retrieval-Augmented Generation with Gemini, citing its sources on every answer.",
     tags: ["RAG", "Next.js", "Gemini"],

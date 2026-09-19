@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #eee8df;
+  color: #22221d;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #2c365a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #22221d;
+}
+
+::selection {
+  background: #c9beae;
+}

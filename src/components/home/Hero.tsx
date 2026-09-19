@@ -25,7 +25,7 @@ export default function Hero() {
             <span className="text-navy">Acharya</span>
           </h1>
           <p className="m-0 mb-[40px] max-w-[520px] text-[19px] leading-[1.6] text-ink/85 [text-wrap:pretty]">
-            Hi welcome to my personal portfolio! I'm currently leading AI engineering at QuoteMedia building across the AI stack from data pipelines, retrieval systems and agents, and web
+            Hi welcome to my personal portfolio! I&rsquo;m currently leading AI engineering at QuoteMedia building across the AI stack from data pipelines, retrieval systems and agents, and web
             apps. Working across multiple teams with a focus on operational improvements and client products.
           </p>
           <div className="flex flex-wrap gap-[16px]">

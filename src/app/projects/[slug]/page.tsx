@@ -9,13 +9,15 @@ export function generateStaticParams() {
   return PROJECTS.map((p) => ({ slug: p.id }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const project = PROJECTS.find((p) => p.id === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = PROJECTS.find((p) => p.id === slug);
   return { title: project ? `${project.title} — Gaurab Acharya` : "Project — Gaurab Acharya" };
 }
 
-export default function ProjectDetailPage({ params }: { params: { slug: string } }) {
-  const project = PROJECTS.find((p) => p.id === params.slug);
+export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = PROJECTS.find((p) => p.id === slug);
   if (!project) notFound();
 
   return (

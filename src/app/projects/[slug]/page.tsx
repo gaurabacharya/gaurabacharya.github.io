@@ -23,7 +23,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   return (
     <div className="animate-rise">
-      <div className="bg-navy px-[56px] pb-[72px] pt-[150px]">
+      <div className="bg-navy px-5 sm:px-10 lg:px-[56px] pb-[72px] pt-[110px] lg:pt-[150px]">
         <div className="mx-auto max-w-[900px]">
           <Link
             href="/projects"
@@ -58,7 +58,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-[900px] px-[56px] pb-[100px] pt-[72px]">
+      <div className="mx-auto max-w-[900px] px-5 sm:px-10 lg:px-[56px] pb-[100px] pt-[72px]">
         {project.screenshots?.length ? (
           <ImageGallery images={project.screenshots} title={project.title} />
         ) : (

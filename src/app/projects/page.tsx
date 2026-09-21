@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="mx-auto max-w-[1240px] animate-rise px-[56px] pb-[100px] pt-[150px]">
+    <div className="mx-auto max-w-[1240px] animate-rise px-5 sm:px-10 lg:px-[56px] pb-[100px] pt-[110px] lg:pt-[150px]">
       <p className="m-0 mb-[18px] font-mono text-xs uppercase tracking-[0.14em] text-navy">
         {PROJECTS.length} projects · 2020 — 2026
       </p>

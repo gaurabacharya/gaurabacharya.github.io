@@ -7,7 +7,7 @@ export default function HeroChatDemo() {
   const { qText, aText, phase, showCite, cites } = useTypewriter(SCRIPTS);
 
   return (
-    <div className="flex min-h-[340px] flex-col rounded-card border border-ink/10 bg-cream-soft p-[24px] shadow-[0_24px_60px_rgba(34,34,29,.1)]">
+    <div className="flex min-h-[300px] flex-col rounded-card border border-ink/10 bg-cream-soft p-[18px] sm:min-h-[340px] sm:p-[24px] shadow-[0_24px_60px_rgba(34,34,29,.1)]">
       <div className="mb-[20px] flex items-center gap-[10px] border-b border-ink/[0.09] pb-[16px]">
         <span className="h-[8px] w-[8px] rounded-full bg-navy" />
         <span className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink/60">

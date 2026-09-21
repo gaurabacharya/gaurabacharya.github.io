@@ -7,18 +7,26 @@
 }
 
 html {
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
+/* svh stays fixed as the mobile URL bar shows/hides, so sections don't resize mid-scroll. */
 :root {
   --screen-h: 100vh;
 }
 
-/* Desktop renders at 80%; vh lengths are scaled by zoom too, so 125vh fills the window. */
+@supports (height: 100svh) {
+  :root {
+    --screen-h: 100svh;
+  }
+}
+
+/* Desktop renders at 80%; vh lengths are scaled by zoom too, so 125vh fills the window.
+   Section snapping is desktop-only — on touch it fights momentum scrolling. */
 @media (min-width: 1024px) {
   html {
     zoom: 0.8;
+    scroll-snap-type: y proximity;
   }
   :root {
     --screen-h: 125vh;

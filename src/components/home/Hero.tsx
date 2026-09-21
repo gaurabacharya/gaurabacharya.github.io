@@ -8,7 +8,7 @@ const SHOW_PROFILE_IMAGE = false;
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen snap-start items-center overflow-hidden px-[56px] pb-[80px] pt-[150px]">
+    <section className="relative flex min-h-screen snap-start items-center overflow-hidden px-5 sm:px-10 lg:px-[56px] pb-[56px] pt-[110px] lg:pb-[80px] lg:pt-[150px]">
       <div className="mx-auto grid w-full max-w-[1240px] items-center gap-[56px] md:grid-cols-[minmax(0,1.05fr)_minmax(0,.95fr)]">
         <div>
           {SHOW_PROFILE_IMAGE && (
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         <HeroChatDemo />
       </div>
-      <div className="absolute bottom-[34px] left-[56px] flex items-center gap-[10px] font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink/45">
+      <div className="absolute bottom-[34px] left-10 hidden sm:flex lg:left-[56px] items-center gap-[10px] font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink/45">
         Scroll <span className="h-px w-[44px] bg-ink" />
       </div>
     </section>

@@ -6,7 +6,7 @@ export default function ExperiencePreview() {
   const jobs = getJobsByRecency();
 
   return (
-    <section className="flex min-h-screen snap-start items-center bg-cream px-[56px] py-[48px] lg:h-screen">
+    <section className="flex min-h-screen snap-start items-center bg-cream px-5 sm:px-10 lg:px-[56px] py-[64px] lg:h-screen lg:py-[48px]">
       <div className="mx-auto flex w-full max-w-[1240px] flex-col lg:h-full lg:justify-center">
         <div className="mb-[28px] flex flex-wrap items-end justify-between gap-[32px]">
           <div>

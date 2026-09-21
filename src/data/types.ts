@@ -20,6 +20,7 @@ export interface Project {
   links: ProjectLink[];
   sections: ProjectSection[];
   image?: string;
+  screenshots?: string[];
 }
 
 export interface Job {

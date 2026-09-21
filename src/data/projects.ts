@@ -8,6 +8,7 @@ export const PROJECTS: Project[] = [
     title: "Medical RAG Chatbot",
     meta: "Full-stack · 2025",
     image: "/images/projects/MedicalRAGIcon.png",
+    screenshots: ["/images/projects/rag-1.png", "/images/projects/rag-2.png", "/images/projects/rag-3.png"],
     short:
       "Full-stack medical Q&A chatbot pairing Retrieval-Augmented Generation with Gemini, citing its sources on every answer.",
     tags: ["RAG", "Next.js", "Gemini"],
@@ -24,7 +25,7 @@ export const PROJECTS: Project[] = [
     links: [
       { label: "Backend repo", href: "https://github.com/gaurabacharya/Medical-RAG-Chatbot" },
       { label: "Frontend repo", href: "https://github.com/gaurabacharya/medical-chatbot-frontend" },
-      { label: "Demo video", href: "https://youtu.be/-NcgFqA0GN8" },
+      { label: "Demo video", href: "https://www.youtube.com/watch?v=-NcgFqA0GN8" },
     ],
     sections: [
       {
@@ -52,6 +53,7 @@ export const PROJECTS: Project[] = [
     title: "SNKRView — Sneaker Recognition",
     meta: "iOS · On-device ML · Hackathon winner",
     image: "/images/projects/SneakerViewIcon.png",
+    screenshots: ["/images/projects/snkr-1.png", "/images/projects/snkr-2.png", "/images/projects/snkr-3.png", "/images/projects/snkr-4.png"],
     short:
       "iOS app with a trained image-classification model that identifies the model of Jordan sneakers from a photo, running entirely on device.",
     tags: ["Swift", "TensorFlow Lite", "TinyML"],
@@ -60,6 +62,7 @@ export const PROJECTS: Project[] = [
       { label: "GitHub", href: "https://github.com/gaurabacharya/SnkrView" },
       { label: "Devpost", href: "https://devpost.com/software/snkrview" },
       { label: "YouTube demo", href: "https://www.youtube.com/embed/1pvxpE0J9TI" },
+      { label: "Competition writeup", href: "https://tinyverse.substack.com/i/41667171/competition" },
     ],
     sections: [
       {
@@ -87,11 +90,34 @@ export const PROJECTS: Project[] = [
     title: "Kidney Cancer Genomic Analysis",
     meta: "Computational genomics · UBC BMEG 310",
     image: "/images/projects/KidneyGenomicsIcon.png",
+    screenshots: [
+      "/images/projects/kirc-1.jpg",
+      "/images/projects/kirc-2.jpg",
+      "/images/projects/kirc-3.jpg",
+      "/images/projects/kirc-4.png",
+      "/images/projects/kirc-5.png",
+      "/images/projects/kirc-6.png",
+      "/images/projects/kirc-7.png",
+      "/images/projects/kirc-8.png",
+      "/images/projects/kirc-9.png",
+      "/images/projects/kirc-10.png",
+      "/images/projects/kirc-11.png",
+      "/images/projects/kirc-12.png",
+      "/images/projects/kirc-13.png",
+      "/images/projects/kirc-14.png",
+      "/images/projects/kirc-15.png",
+    ],
     short:
       "Multi-omic analysis of kidney renal clear cell carcinoma in R — survival analysis, mutation burden, and patient clustering across clinical, mutation and RNA-seq data.",
     tags: ["R", "Genomics"],
     stack: ["R", "R Markdown", "survival / survminer", "dplyr", "ggplot2", "hclust"],
-    links: [{ label: "GitHub", href: "https://github.com/gaurabacharya/BMEG310-FinalProject" }],
+    links: [
+      { label: "GitHub", href: "https://github.com/gaurabacharya/BMEG310-FinalProject" },
+      {
+        label: "Project report",
+        href: "https://drive.google.com/file/d/1MtCtjZ6INhWKIkpKQe40xh8pWjGDEIwI/view?usp=sharing",
+      },
+    ],
     sections: [
       {
         h: "Overview",
@@ -118,6 +144,7 @@ export const PROJECTS: Project[] = [
     title: "Posture Position Corrector",
     meta: "React Native · Wearables",
     image: "/images/projects/PostureIcon.png",
+    screenshots: ["/images/projects/posture-1.png", "/images/projects/posture-2.png", "/images/projects/posture-3.png"],
     short:
       "App connected to an accelerometer and gyroscope that tracks posture data and supports posture-correction physiotherapy.",
     tags: ["React Native", "ML"],
@@ -154,6 +181,7 @@ export const PROJECTS: Project[] = [
     title: "Reliable Data Transfer over UDP",
     meta: "Systems · C",
     image: "/images/projects/tcpIcon.png",
+    screenshots: ["/images/projects/tcp-1.png", "/images/projects/tcp-2.jpg"],
     short:
       "Send/receive algorithms in C implementing the congestion and flow control mechanisms of TCP on top of UDP sockets.",
     tags: ["C", "Networking"],
@@ -181,6 +209,7 @@ export const PROJECTS: Project[] = [
     title: "Distance Vector & Link State Routing",
     meta: "Systems · Python",
     image: "/images/projects/routingIcon.png",
+    screenshots: ["/images/projects/routing-1.png", "/images/projects/routing-2.png"],
     short:
       "Distance vector and link state routing algorithms in Python that update routing tables from a network topology and find the shortest path.",
     tags: ["Python", "Algorithms"],
@@ -208,6 +237,7 @@ export const PROJECTS: Project[] = [
     title: "Portable Microscope for Sickle Cell Detection",
     meta: "Biomedical design · UBC",
     image: "/images/projects/portableMicroscope.png",
+    screenshots: ["/images/projects/microscope-1.png", "/images/projects/microscope-2.PNG", "/images/projects/microscope-3.png"],
     short:
       "Low-cost portable microscope designed for rural villages to detect sickle cell disease, built in a UBC Biomedical Engineering design course.",
     tags: ["Hardware", "ML"],
@@ -239,6 +269,7 @@ export const PROJECTS: Project[] = [
     title: "COVID-19 Vaccine Transport Container",
     meta: "Thermal design · Arduino",
     image: "/images/projects/vaccineContainer.png",
+    screenshots: ["/images/projects/vaccine-1.png", "/images/projects/vaccine-2.png", "/images/projects/vaccine-3.png"],
     short:
       "Container designed to transport COVID-19 vaccine vials safely and securely, holding temperature while optimizing shipment space.",
     tags: ["Hardware", "Arduino"],
@@ -270,6 +301,7 @@ export const PROJECTS: Project[] = [
     title: "NBA Statistic Data Analysis",
     meta: "Data · Python + R Shiny",
     image: "/images/projects/NBAStatsIcon.png",
+    screenshots: ["/images/projects/nba-1.png", "/images/projects/nba-2.png"],
     short:
       "Scraped and analyzed NBA statistics to surface the top five players per stat category, with an R Shiny web app to explore them.",
     tags: ["Python", "R Shiny"],
@@ -301,6 +333,7 @@ export const PROJECTS: Project[] = [
     title: "Flappy Beard Arcade Game",
     meta: "Python · Pygame",
     image: "/images/projects/gameIcon.png",
+    screenshots: ["/images/projects/flappy-1.png", "/images/projects/flappy-2.png"],
     short:
       "A Flappy Bird remix starring James Harden dodging shaving razors — built to learn object-oriented programming properly.",
     tags: ["Python", "Pygame"],

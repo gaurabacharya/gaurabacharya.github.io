@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PROJECTS } from "@/data/projects";
 import Button from "@/components/ui/Button";
+import ImageGallery from "@/components/projects/ImageGallery";
 import Tag from "@/components/ui/Tag";
 import MonoBadge from "@/components/ui/MonoBadge";
 
@@ -58,12 +59,16 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
       </div>
       <div className="mx-auto max-w-[900px] px-[56px] pb-[100px] pt-[72px]">
-        <div
-          className="mb-[48px] flex aspect-video items-center justify-center rounded-card border border-ink/[0.12] bg-cream-soft text-center font-mono text-[11px] uppercase tracking-[0.1em] text-ink/45"
-          aria-hidden
-        >
-          Project screenshot
-        </div>
+        {project.screenshots?.length ? (
+          <ImageGallery images={project.screenshots} title={project.title} />
+        ) : (
+          <div
+            className="mb-[48px] flex aspect-video items-center justify-center rounded-card border border-ink/[0.12] bg-cream-soft text-center font-mono text-[11px] uppercase tracking-[0.1em] text-ink/45"
+            aria-hidden
+          >
+            Project screenshot
+          </div>
+        )}
         <div className="mb-[48px] flex flex-wrap gap-[8px]">
           {project.stack.map((s) => (
             <Tag key={s} label={s} variant="filled" />

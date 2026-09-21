@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   title: "Gaurab Acharya — AI Engineering Lead",
   description:
     "Gaurab Acharya is an AI Engineering Lead building across the AI stack — data pipelines, retrieval systems and agents, and the web apps that put them in front of people.",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

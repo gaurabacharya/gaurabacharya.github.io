@@ -29,10 +29,29 @@ const fraunces = Fraunces({
   variable: "--font-flourish",
 });
 
+const SITE_TITLE = "Gaurab Acharya — AI Engineering Lead";
+const SITE_DESCRIPTION =
+  "Gaurab Acharya is an AI Engineering Lead building across the AI stack — data pipelines, retrieval systems and agents, and the web apps that put them in front of people.";
+const THUMBNAIL = "/images/tumbnail.png";
+
 export const metadata: Metadata = {
-  title: "Gaurab Acharya — AI Engineering Lead",
-  description:
-    "Gaurab Acharya is an AI Engineering Lead building across the AI stack — data pipelines, retrieval systems and agents, and the web apps that put them in front of people.",
+  metadataBase: new URL("https://gaurabacharya.github.io"),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: "Gaurab Acharya",
+    type: "website",
+    images: [{ url: THUMBNAIL, width: 2880, height: 1528, alt: "Gaurab Acharya" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [THUMBNAIL],
+  },
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],
     apple: "/icon.png",

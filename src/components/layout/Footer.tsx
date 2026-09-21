@@ -3,7 +3,7 @@ import { SOCIALS } from "@/data/socials";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink px-[56px] pb-[40px] pt-[64px]">
+    <footer className="snap-end bg-ink px-[56px] pb-[40px] pt-[64px]">
       <div className="mx-auto flex max-w-[1240px] flex-wrap items-end justify-between gap-[32px]">
         <div>
           <div className="mb-[14px] font-display text-[clamp(30px,4vw,52px)] font-black leading-none tracking-[-0.02em] text-cream">
@@ -31,13 +31,13 @@ export default function Footer() {
       <div className="mx-auto mt-[44px] flex max-w-[1240px] flex-wrap justify-between gap-[24px] border-t border-cream/[0.14] pt-[22px] font-mono text-[10.5px] uppercase tracking-[0.08em] text-cream/50">
         <span>© 2026 — Built with Next.js, deployed on GitHub Pages</span>
         <span className="flex gap-[18px]">
-          <Link href="/about" className="text-inherit">
+          <Link href="/about" className="text-inherit hover:text-cream">
             About
           </Link>
-          <Link href="/projects" className="text-inherit">
+          <Link href="/projects" className="text-inherit hover:text-cream">
             Projects
           </Link>
-          <Link href="/contact" className="text-inherit">
+          <Link href="/contact" className="text-inherit hover:text-cream">
             Contact
           </Link>
         </span>

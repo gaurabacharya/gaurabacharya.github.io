@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <div className="pointer-events-none fixed left-0 right-0 top-[20px] z-[60] flex justify-center px-[20px]">
       <header className="pointer-events-auto flex w-full max-w-[960px] items-center justify-between gap-[24px] rounded-pill bg-ink px-[24px] py-[9px] pr-[10px] shadow-[0_10px_30px_rgba(34,34,29,.16)]">
-        <Link href="/" className="font-display text-lg font-black tracking-[-0.01em] text-cream">
+        <Link href="/" className="font-display text-lg font-black tracking-[-0.01em] text-cream hover:text-cream">
           GA.
         </Link>
         <nav className="flex items-center gap-[22px]">
@@ -32,7 +32,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap border-b-[1.5px] border-transparent py-[2px] font-body text-[13.5px] font-medium text-cream hover:border-beige"
+              className="whitespace-nowrap border-b-[1.5px] border-transparent py-[2px] font-body text-[13.5px] font-medium text-cream hover:border-beige hover:text-cream"
               style={{ opacity: isActive(item.href) ? 1 : 0.62 }}
             >
               {item.label}
